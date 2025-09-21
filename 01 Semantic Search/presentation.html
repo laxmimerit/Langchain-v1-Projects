@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangChain Knowledge Base - Building Semantic Search Engines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .step h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .step p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .code-snippet {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #495057;
+            margin-top: 10px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            font-size: 1.5em;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        
+        .architecture {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .architecture h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .flow-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 120px;
+        }
+        
+        .arrow {
+            font-size: 1.5em;
+            color: #3498db;
+        }
+        
+        .benefits {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .benefits h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .benefit-item {
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .flow-diagram {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🔍 LangChain Projects</h1>
+            <p>Building Semantic Search Engines with Vector Databases</p>
+        </div>
+
+        <!-- Workflow Steps -->
+        <div class="workflow">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>📄 Document Loading</h3>
+                <p><strong>PyPDFLoader:</strong> Load PDF documents into Document objects</p>
+                <p>Each Document contains:</p>
+                <ul style="margin-left: 20px; color: #666;">
+                    <li>page_content (text)</li>
+                    <li>metadata (page, source)</li>
+                    <li>id (optional)</li>
+                </ul>
+                <div class="code-snippet">
+loader = PyPDFLoader("document.pdf")<br>
+documents = loader.load()
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>✂️ Text Splitting</h3>
+                <p><strong>RecursiveCharacterTextSplitter:</strong> Split large documents into manageable chunks</p>
+                <p>Why? Pages are too coarse - smaller chunks prevent context "wash-out"</p>
+                <p><strong>Overlap:</strong> Preserves context between chunks</p>
+                <div class="code-snippet">
+splitter = RecursiveCharacterTextSplitter(<br>
+&nbsp;&nbsp;chunk_size=4096,<br>
+&nbsp;&nbsp;chunk_overlap=410<br>
+)
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>🧠 Embeddings</h3>
+                <p><strong>Vector Representation:</strong> Convert text to numeric vectors</p>
+                <p>Similar meanings = geometrically close vectors</p>
+                <p>Enables semantic search without exact keyword matching</p>
+                <div class="code-snippet">
+embeddings = OllamaEmbeddings(<br>
+&nbsp;&nbsp;model="nomic-embed-text"<br>
+)
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>🗄️ Vector Storage</h3>
+                <p><strong>Chroma Database:</strong> Store and index embeddings for fast similarity search</p>
+                <p>Supports persistence, metadata filtering, and various similarity metrics</p>
+                <div class="code-snippet">
+vector_store = Chroma(<br>
+&nbsp;&nbsp;embedding_function=embeddings,<br>
+&nbsp;&nbsp;persist_directory="./db"<br>
+)
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>🔍 Retrieval</h3>
+                <p><strong>Multiple Search Methods:</strong> Find relevant documents using various strategies</p>
+                <p>Similarity, MMR (diversity), score thresholds, metadata filtering</p>
+                <div class="code-snippet">
+retriever = vector_store.as_retriever(<br>
+&nbsp;&nbsp;search_type="mmr",<br>
+&nbsp;&nbsp;search_kwargs={"k": 4}<br>
+)
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <h3>🤖 RAG Applications</h3>
+                <p><strong>Foundation for AI:</strong> Retrieved context + LLM = Intelligent answers</p>
+                <p>Enables question-answering, chat systems, and knowledge discovery</p>
+                <div class="code-snippet">
+context = retriever.invoke(query)<br>
+# Send context + query to LLM
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture Flow -->
+        <div class="architecture">
+            <h2>🏗️ System Architecture Flow</h2>
+            <div class="flow-diagram">
+                <div class="flow-item">PDF Document</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Text Chunks</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Embeddings</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Vector DB</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">Search Results</div>
+                <div class="arrow">→</div>
+                <div class="flow-item">LLM Context</div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+            <div class="feature-card">
+                <h3><span class="icon">🔍</span>Search Methods</h3>
+                <ul class="feature-list">
+                    <li>Similarity Search - Find most similar content</li>
+                    <li>MMR Search - Balance similarity with diversity</li>
+                    <li>Score Threshold - Quality-filtered results</li>
+                    <li>Vector Search - Direct embedding comparison</li>
+                    <li>Async Operations - High-performance retrieval</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="icon">🏷️</span>Metadata Filtering</h3>
+                <ul class="feature-list">
+                    <li>Page-specific search: {"page": 1}</li>
+                    <li>Range filtering: {"page": {"$gte": 5}}</li>
+                    <li>Complex conditions: {"$and": [...]}</li>
+                    <li>Source filtering: {"source": "paper.pdf"}</li>
+                    <li>Negation: {"type": {"$ne": "unwanted"}}</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="icon">⚡</span>Performance Features</h3>
+                <ul class="feature-list">
+                    <li>Local persistence - Data survives restarts</li>
+                    <li>In-memory option - Fast experimentation</li>
+                    <li>Batch operations - Process multiple queries</li>
+                    <li>Configurable chunk sizes - Optimize for use case</li>
+                    <li>Multiple embedding models - Choose best fit</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3><span class="icon">🛠️</span>Integration Options</h3>
+                <ul class="feature-list">
+                    <li>LangChain ecosystem compatibility</li>
+                    <li>Ollama local model support</li>
+                    <li>Multiple document loaders (PDF, text, web)</li>
+                    <li>Runnable interface for chains</li>
+                    <li>Cloud and on-premise deployment</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="benefits">
+            <h2>🎯 Key Benefits & Use Cases</h2>
+            <div class="benefit-grid">
+                <div class="benefit-item">
+                    <div>📚 Knowledge Management</div>
+                    <small style="opacity: 0.9;">Search large document collections</small>
+                </div>
+                <div class="benefit-item">
+                    <div>💬 Intelligent Chatbots</div>
+                    <small style="opacity: 0.9;">Context-aware conversations</small>
+                </div>
+                <div class="benefit-item">
+                    <div>🔬 Research Assistance</div>
+                    <small style="opacity: 0.9;">Find relevant papers & citations</small>
+                </div>
+                <div class="benefit-item">
+                    <div>📋 Document Analysis</div>
+                    <small style="opacity: 0.9;">Extract insights from reports</small>
+                </div>
+                <div class="benefit-item">
+                    <div>🎓 Educational Tools</div>
+                    <small style="opacity: 0.9;">Smart tutoring systems</small>
+                </div>
+                <div class="benefit-item">
+                    <div>⚖️ Legal Research</div>
+                    <small style="opacity: 0.9;">Case law & regulation search</small>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; color: white;">
+                <h3 style="margin-bottom: 15px;">🚀 Why This Matters</h3>
+                <p style="font-size: 1.1em;">Transform static documents into intelligent, searchable knowledge bases that understand meaning, not just keywords. Enable AI applications that can reason over your data with unprecedented accuracy and relevance.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
