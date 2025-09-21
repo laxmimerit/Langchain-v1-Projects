@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic RAG System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .card h3 {
+            color: #495057;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            font-size: 1.5rem;
+        }
+        
+        .workflow {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .results {
+            background: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .results h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Agentic RAG System</h1>
+            <p>Intelligent Document Retrieval with LangGraph & Ollama</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>🎯 System Overview</h2>
+                <div class="highlight">
+                    <p><strong>Agentic RAG</strong> combines retrieval-augmented generation with intelligent decision-making. Unlike traditional RAG systems, this agent can decide when to search documents, grade relevance, and rewrite questions for better results.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🏗️ Architecture Components</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3><span class="icon">📚</span>Vector Database</h3>
+                        <p>Chroma vector store with PDF documents chunked and embedded using nomic-embed-text model via Ollama.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Chroma</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">nomic-embed-text</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><span class="icon">🧠</span>Language Model</h3>
+                        <p>Qwen3 model via Ollama for reasoning, grading documents, rewriting questions, and generating responses.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Qwen3</span>
+                            <span class="tech-tag">ChatOllama</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><span class="icon">🔧</span>Retrieval Tool</h3>
+                        <p>Custom @tool decorated function that searches the vector database and formats results with page numbers.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">@tool</span>
+                            <span class="tech-tag">LangChain</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><span class="icon">🕸️</span>Graph Workflow</h3>
+                        <p>LangGraph orchestrates the multi-step reasoning process with conditional edges and state management.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">StateGraph</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🔄 Workflow Process</h2>
+                <div class="workflow">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>Query Analysis</strong><br>
+                            Agent decides whether to retrieve documents or respond directly
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>Document Retrieval</strong><br>
+                            If needed, search vector database for relevant information
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>Relevance Grading</strong><br>
+                            Evaluate if retrieved documents are relevant to the question
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <strong>Adaptive Response</strong><br>
+                            Generate answer from context OR rewrite question and retry
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="section">
+                <h2>✅ Test Results</h2>
+                <div class="results">
+                    <h4>Example Queries Tested:</h4>
+                    <ul>
+                        <li><strong>"What are the main methods mentioned in this paper?"</strong> → Retrieves and analyzes document content</li>
+                        <li><strong>"Tell me about earth"</strong> → Responds directly without retrieval (not in documents)</li>
+                        <li><strong>Technical questions</strong> → Grades relevance and rewrites if needed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🚀 Benefits</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>🎯 Intelligent Routing</h3>
+                        <p>Automatically decides when retrieval is needed vs. direct response</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🔍 Quality Control</h3>
+                        <p>Grades document relevance and improves poor queries</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🏠 Local Processing</h3>
+                        <p>Runs entirely on local Ollama models - no external API costs</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>📈 Scalable</h3>
+                        <p>Built with LangGraph for complex multi-step workflows</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
