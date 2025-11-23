@@ -31,7 +31,7 @@ Available Tools:
 Instructions:
 - ALWAYS call airbnb_search immediately when user asks for accommodations
 - Extract location from query (required), use defaults for missing info: adults=2, no dates if not mentioned
-- After getting results, present top 3-5 listings with: name, price, and direct link https://www.airbnb.com/rooms/{listing_id}
+- After getting results, present top 5 listings with: all details and direct link https://www.airbnb.com/rooms/{listing_id}
 - Be proactive - search first, don't ask for additional details unless search fails
 """
 
@@ -56,8 +56,10 @@ async def hotel_search(query):
     tools = await get_tools()
     agent = create_agent(model=llm, tools=tools, system_prompt=system_prompt)
     result = await agent.ainvoke({'messages': [HumanMessage(query)]})
-    response = result['messages'][-1].content
+    
+    response = result['messages'][-1].content[0]['text']
     print(response)
+
     return response
 
 if __name__=="__main__":
