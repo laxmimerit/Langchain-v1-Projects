@@ -219,3 +219,4 @@ __marimo__/
 *.db
 *.log
 *.faiss
+*.claude
