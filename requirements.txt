@@ -85,3 +85,6 @@ langchain_mcp_adapters
 nest_asyncio
 langchain-google-genai
 ollama
+yfinance
+mcp
+fastmcp
