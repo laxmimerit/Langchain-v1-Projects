@@ -1,0 +1,14 @@
+## Sources for Theme 4: What are practical use cases and applications of MCP?
+
+*   **Model Context Protocol (MCP) real world use cases, adoptions and ...**
+    *   URL: https://medium.com/@laowang_journey/model-context-protocol-mcp-real-world-use-cases-adoptions-and-comparison-to-functional-calling-9320b775845c
+    *   Key snippets: "Model Context Protocol (MCP) is an open standard introduced by Anthropic to bridge AI models (like chatbots or coding assistants) with external data sources and tools... In essence, MCP acts as a universal connector... providing a consistent way to plug AI systems into various services, databases, or applications."
+    *   Key snippets: "Use Cases and Practical Applications: Database Querying and Data Analysis, File Systems and Code Repositories, Business and Productivity Tools, Web and API Integrations, Agentic Workflows and Automation."
+    *   Key snippets: "Early Adopters and Real-World Implementations: Anthropic Claude Desktop, Codeium’s “Windsurf” IDE (Cascade), Zed & Replit (Developer Tools), Sourcegraph, Enterprise Early Adopters (Block & Apollo), Community and Open-Source Implementations."
+    *   Key snippets: "When to Use and Avoid MCP: Use MCP for on-the-fly decisions, ad hoc lookups that require current data. Avoid MCP for static workflows, enterprise search."
+
+*   **5 real-world Model Context Protocol integration examples - Merge.dev**
+    *   URL: https://www.merge.dev/blog/mcp-integration-examples
+    *   Key snippets: "MCP provides a standardized way for LLMs to interact with external systems."
+    *   Key snippets: "Impactful MCP examples: Power intelligent help desks, Enable recruiters to source high-fit candidates, Help finance teams negotiate with vendors, Automate expense reviews across companies, Streamline busywork for financial analysts."
+    *   Key snippets: "Use MCP for on-the-fly decisions... Use MCP for ad hoc looks up that require current data... Avoid MCP for static workflows... Avoid MCP for enterprise search."

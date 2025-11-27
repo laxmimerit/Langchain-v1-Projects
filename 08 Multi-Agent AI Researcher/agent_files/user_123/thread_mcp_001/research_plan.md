@@ -5,8 +5,7 @@
 
 ## Thematic Questions
 
-1. What is MCP and what problem does it solve?
-2. What is the history and evolution of MCP?
-3. What are the key architectural components and principles of MCP?
-4. What are practical use cases and applications of MCP?
-5. What are the advantages and limitations/challenges of MCP?
+1. What is MCP (Message Control Program), its core functionalities, and typical use cases?
+2. What is API (Application Programming Interface), its core functionalities, and typical use cases?
+3. What are the fundamental architectural and operational differences between MCP and API?
+4. What are the respective advantages and disadvantages of MCP and API in different contexts?
