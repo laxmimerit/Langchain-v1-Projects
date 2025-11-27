@@ -1,94 +1,49 @@
-# Sources for MCP Analysis
+## Sources for Theme 2: What is the history and evolution of MCP?
 
-## Web Search Result 1: The Complete History of MCP: From MOP to the Future of Model Context Protocol (mcpfy.ai)
+- **Source 1:** [The Surprising Origins of the Model Context Protocol | by Kyle Stratis](https://kylestratis.medium.com/the-surprising-origins-of-the-model-context-protocol-868d640ac7c6)
+  - Snippet: "MCP was born out of an internal project at Anthropic. David Soria Parra, a software engineer at Anthropic, was using Claude Desktop to assist him with his day-to-day work: writing developer tools. But he was frustrated by having to constantly copy and paste code between Claude Desktop and his code editor." (Aug 13, 2025)
+  - Snippet: "He had also been working on a Language Server Protocol (LSP) project, which inspired him to take a similar approach to this problem."
+  - Snippet: "David noticed that writing integrations for LLMs, especially for more than one, created the MxN problem... With the LSP project still in the back of his mind, it dawned on David that an LSP-like protocol could be the perfect solution to the MxN problem."
+  - Snippet: "David brought his idea to Justin Spahr-Summers, and the two began setting the foundations for what would become MCP. Later that year, before MCP’s initial release, Anthropic had an internal hackathon. Several teams adopted MCP right away..."
 
-### Introduction
-- Model Context Protocol (MCP) has changed how AI systems connect, communicate, and operate.
-- Explores the journey from MOP (Model Object Protocol) to MCP servers and its role in redefining AI interoperability.
+- **Source 2:** [Model Context Protocol - Wikipedia](https://en.wikipedia.org/wiki/Model_Context_Protocol)
+  - Snippet: "Introduced November 25, 2024; 12 months ago (2024-11-25)"
+  - Snippet: "The Model Context Protocol (MCP) is an open standard, open-source framework introduced by Anthropic in November 2024..."
+  - Snippet: "Following its announcement, the protocol was adopted by major AI providers, including OpenAI and Google DeepMind."
+  - Snippet: "MCP was announced by Anthropic in November 2024 as an open standard for connecting AI assistants to data systems such as content repositories, business management tools, and development environments."
+  - Snippet: "The protocol was created at Anthropic by developers David Soria Parra and Justin Spahr-Summers."
+  - Snippet: "MCP aims to address the challenge of information silos and legacy systems. Before MCP, developers often had to build custom connectors for each data source or tool, resulting in what Anthropic described as an 'N×M' data integration problem."
+  - Snippet: "Earlier stop-gap approaches—such as OpenAI's 2023 'function-calling' API and the ChatGPT plug-in framework—solved similar problems but required vendor-specific connectors."
+  - Snippet: "In March 2025, OpenAI officially adopted the MCP, following a decision to integrate the standard across its products..."
+  - Snippet: "Demis Hassabis, CEO of Google DeepMind, confirmed in April 2025 MCP support in the upcoming Gemini models and related infrastructure."
 
-### 1. Why MOP Was Created
-- Before MCP, AI systems lacked a standard way to interact with external tools or data; integrations were custom-built.
-- MOP aimed to standardize AI models' access to external data, simplify tool usage, and enable consistent communication.
-- MOP gave AI models their first true interface with the outside world, but its rigid design couldn't keep up with the need for flexibility and real-time context.
+- **Source 3:** [Engineering AI systems with Model Context Protocol · Raygun Blog](https://raygun.com/blog/announcing-mcp/)
+  - Snippet: "On November 26, 2024, Anthropic released the Model Context Protocol (MCP)—an open standard for data exchange between applications and data sources."
 
-### 2. Why MCP Replaced MOP
-- Limitations of MOP led to MCP, focusing on context, flexibility, and interoperability.
-- MCP defines how AI models interact with tools, databases, and external systems, building on top of traditional APIs.
-- With MCP, models gain access to standardized tool definitions, communication becomes consistent, and custom connectors are no longer needed.
+- **Source 4:** [A Deep Dive Into MCP and the Future of AI Tooling](https://a16z.com/a-deep-dive-into-mcp-and-the-future-of-ai-tooling/)
+  - Snippet: "Model Context Protocol (MCP), introduced in November 2024, has gained significant traction within developer and AI communities as a potential solution."
+  - Snippet: "The idea is not new; MCP took inspiration from the LSP (Language Server Protocol)."
+  - Snippet: "Where MCP extends beyond LSP is in its agent-centric execution model: LSP is mostly reactive (responding to requests from an IDE based on user input), whereas MCP is designed to support autonomous AI workflows."
 
-### 3. Why MCP Servers Are Needed
-- MCP servers are the backbone of the ecosystem, hosting tools, defining capabilities, and managing real-time communication.
-- They provide centralized tool discovery and authentication, allow AI agents to dynamically interact with live systems, and offer scalability.
+- **Source 5:** [Introducing the Model Context Protocol - Anthropic](https://www.anthropic.com/news/model-context-protocol)
+  - Snippet: "Today, we're open-sourcing the Model Context Protocol (MCP), a new standard for connecting AI assistants to the systems where data lives, including content repositories, business tools, and development environments. Its aim is to help frontier models produce better, more relevant responses. Nov 25, 2024"
+  - Snippet: "Early adopters like Block and Apollo have integrated MCP into their systems, while development tools companies including Zed, Replit, Codeium, and Sourcegraph are working with MCP to enhance their platforms..."
 
-### 4. Why MCP Won
-- Solves the critical bottleneck of connecting reasoning models with necessary tools.
-- Model-agnostic, working with various AI models (OpenAI, Anthropic, Gemini, Mistral).
-- Interoperable and composable, allowing multiple MCP servers to communicate.
-- Easy to implement with modern SDKs.
-- Redefined the relationship between AI models and APIs, acting as a universal layer of understanding.
+- **Source 6:** [One Year of MCP: November 2025 Spec Release](http://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/)
+  - Snippet: "Today, MCP turns one year old... we’re also releasing a brand-new MCP specification version." (November 25, 2025)
+  - Snippet: "Within the same timeframe, we saw the number of active MCP servers go from just a few experimental ones to thousands."
+  - Snippet: "That’s why we also launched the MCP Registry earlier this year. It’s the central index for all available MCP servers that now has close to two thousand entries since its announcement in September."
+  - Snippet: "To keep this pace sustainable, we spent some time thinking through and putting together a governance structure... Potential contributors now also know how to jump in through formal Working and Interest Groups."
+  - Snippet: "The latest release of the MCP specification ships with a number of highly-anticipated features... Support for Task-based Workflows... Simplified Authorization Flows... Security and Enterprise Features... Extensions... URL Mode Elicitation... Sampling with Tools: Agentic Servers... Developer Experience Improvements."
 
-### 5. Who Created MCP (and Who Invented MOP)
-- MOP was a developer-driven idea.
-- Anthropic formally introduced MCP as an open standard for model-to-tool communication, aiming for vendor-agnostic adoption.
-- OpenAI’s Agents SDK integrated MCP compatibility.
+- **Source 7:** [Roadmap - Model Context Protocol](https://modelcontextprotocol.io/development/roadmap)
+  - Snippet: "Last updated: 2025-10-31. This page outlines our priorities for the next release on November 25th, 2025..."
+  - Snippet: "Currently, MCP is built around mostly synchronous operations. We’re adding async support to allow servers to kick off long-running tasks..."
+  - Snippet: "As organizations deploy MCP servers at enterprise scale, we’re addressing challenges around horizontal scaling."
+  - Snippet: "We’re enabling servers to advertise themselves through `.well-known` URLs..."
+  - Snippet: "As MCP has grown, valuable patterns have emerged for specific industries and use cases. Rather than leaving everyone to reinvent the wheel, we’re officially recognizing and documenting the most popular protocol extensions."
+  - Snippet: "We’re introducing a clear tiering system for SDKs based on factors like specification compliance speed, maintenance responsiveness, and feature completeness."
+  - Snippet: "The MCP Registry launched in preview in September 2025 and is progressing toward general availability."
 
-### 6. Why MCP Is Such a Big Deal
-- Redefines the AI interaction model: AI Model → MCP Server → Data Source (eliminates custom integration).
-- Key advantages: unified tool discovery, seamless data synchronization, plug-and-play multi-agent communication, model-agnostic interoperability.
-
-### 7. How MCP Changed the AI Ecosystem
-- Cornerstone of modern AI development.
-- Enabled real-time agents, multi-model orchestration, and plug-and-play tools.
-
-### 8. The Future of MCP
-- Promising future with increasing vendor adoption.
-- Upcoming innovations: MCP-over-HTTP, edge-based MCP servers, global MCP registries.
-- Aims for a future where any AI model can call any tool, anywhere, instantly.
-
-## Web Search Result 2: The Origins of MCP and ACP: How AI Protocols Emerged (lucidworks.com)
-
-### 1. Setting the Stage: Why Protocols Became Necessary
-- Before MCP/ACP, AI systems were siloed; each LLM required custom integration with APIs, tools, or data sources.
-- Need for standardization, similar to HTTP for the web.
-
-### 2. The Birth of MCP: From Closed Models to Connected Ecosystems
-- MCP, Model Context Protocol, introduced by Anthropic and open-sourced in late 2024.
-- Goal: give AI models a structured, secure way to “plug in” to external tools and data systems.
-- Defines how AI clients request/receive contextual data, how servers expose capabilities, and how security is enforced.
-- Architecture mirrors web browser/server communication, using JSON-RPC and typed schemas.
-
-### 2.2 Early Adoption and Governance
-- Red Hat, AWS, Solo.io, and IBM experimented with MCP extensions.
-- Microsoft integrated MCP concepts into Copilot Studio.
-- Open-source repository on GitHub maintained by Anthropic and contributors.
-
-### 3. The Rise of ACP: Commerce Gets Its Own Protocol
-- Agentic Commerce Protocol (ACP) governs how AI agents initiate and complete e-commerce transactions.
-- Introduced by OpenAI and Stripe in early 2025.
-- Defines secure requests for product data, handling checkout/payment/fulfillment, and managing consent/encryption.
-
-### 4. Timeline: From Proprietary Integrations to Open Protocols
-- 2023: Rise of multimodal and agentic AI.
-- 2024: Calls for AI interoperability; MCP introduced by Anthropic (late 2024).
-- Early 2025: ACP launched by OpenAI and Stripe.
-- 2025: MCP adoption in enterprise AI.
-
-### 5. Why MCP and ACP Matter to Enterprises
-- Connect reasoning systems to the real world, safely and scalably.
-- MCP gives AI agents controlled access to internal systems.
-- ACP enables AI agents to execute commercial actions.
-
-### 7. How MCP and ACP Complement Each Other
-- **MCP:** Connects AI to data, tools, APIs; created by Anthropic (open-source, 2024); scope: knowledge retrieval, workflow orchestration.
-- **ACP:** Enables AI to conduct secure transactions; created by OpenAI + Stripe (commerce-focused, 2025); scope: payments, procurement, fulfillment.
-
-### 8. Practical Example: An Enterprise Buyer with MCP + ACP
-- Illustrates how AI agents use MCP for querying data and ACP for secure transactions.
-
-### 9. Who’s Driving Adoption Next?
-- Cloud providers, open-source communities, enterprise AI platforms, Fintech/commerce vendors.
-- Expected to become default AI infrastructure standards by mid-2026.
-
-### 10. Looking Ahead: Protocols as the AI Operating System
-- LLMs are the brains, protocols (MCP/ACP) are the nervous system.
-- Leads to better interoperability, transparent access, richer personalization, and safe AI transactions.
+- **Source 8:** [Code execution with MCP: Building more efficient agents - Anthropic](https://www.anthropic.com/engineering/code-execution-with-mcp)
+  - Snippet: "Since launching MCP in November 2024, adoption has been rapid: the community has built thousands of MCP servers, SDKs are available for all major programming languages, and the industry has adopted MCP as the de-facto standard for connecting agents to tools and data." (Published Nov 04, 2025)
