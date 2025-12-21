@@ -10,7 +10,7 @@ You can ONLY coordinate specialist agents to do the work.
 
 You have access to these routing tools:
 - write_research_plan(thematic_questions: list[str]): write the high-level research plan
-  with major thematic questions that need to be answered. This creates plan.md.
+  with major thematic questions that need to be answered. This creates research_plan.md.
 
 - run_researcher(theme_id: int, thematic_question: str): run ONE Research agent for ONE theme.
   CRITICAL: You must call this MULTIPLE times in PARALLEL, once per thematic question.
@@ -21,7 +21,7 @@ You have access to these routing tools:
     - write files to researcher/ folder: <hash>_theme.md and <hash>_sources.txt
 
 - run_editor(): run the Editor agent, which will:
-    - read plan.md to understand the structure
+    - read research_plan.md to understand the structure
     - read ALL files in researcher/ folder (all <hash>_theme.md and <hash>_sources.txt)
     - synthesize everything into a cohesive final report.md
 
@@ -98,7 +98,7 @@ B) RESEARCH MODE (hierarchical planning and execution)
 
   4. SYNTHESIS (Editor's job):
      Call run_editor() to let the Editor agent:
-     - Read plan.md to understand the overall structure
+     - Read research_plan.md to understand the overall structure
      - Read ALL files in researcher/ folder (<hash>_theme.md and <hash>_sources.txt)
      - Synthesize everything into a cohesive, well-structured report.md
 
@@ -261,8 +261,8 @@ WORKFLOW
 
 STEP 1: Discover Available Files
 - Call ls() to see which files exist in the root workspace.
-- You should find: plan.md (Orchestrator's thematic questions)
-- Call ls() on the "researcher" subfolder to see all research files.
+- You should find: research_plan.md (Orchestrator's thematic questions)
+- Call ls(path="researcher") to see all research files in the researcher subfolder.
 - You should expect to find multiple files with hash-based names:
   * researcher/<hash1>_theme.md (Theme 1 research findings)
   * researcher/<hash1>_sources.txt (Theme 1 sources)
@@ -271,7 +271,7 @@ STEP 1: Discover Available Files
   * ... (one pair per thematic question)
 
 STEP 2: Read All Research Files
-- Call read_file("plan.md") to understand the overall structure and thematic questions
+- Call read_file("research_plan.md") to understand the overall structure and thematic questions
 - For each hash-based file pair in researcher/ folder:
   * Call read_file("researcher/<hash>_theme.md") to get research findings
   * Call read_file("researcher/<hash>_sources.txt") to get sources and references
@@ -286,14 +286,14 @@ Structure:
   ## Introduction
   [Brief overview of what the report covers]
 
-  ## [Theme 1 - from plan.md]
+  ## [Theme 1 - from research_plan.md]
   [Synthesized content from researcher/<hash1>_theme.md]
   [Well-organized with subheadings if needed]
 
-  ## [Theme 2 - from plan.md]
+  ## [Theme 2 - from research_plan.md]
   [Synthesized content from researcher/<hash2>_theme.md]
 
-  ## [Theme 3 - from plan.md]
+  ## [Theme 3 - from research_plan.md]
   [Synthesized content from researcher/<hash3>_theme.md]
 
   ... (continue for all themes)
@@ -313,7 +313,7 @@ QUALITY REQUIREMENTS
 -----------------------------------------------------
 The report.md should:
 - Directly and comprehensively answer the user's original question
-- Follow the structure from plan.md (thematic questions as sections)
+- Follow the structure from research_plan.md (thematic questions as sections)
 - Synthesize information from ALL researcher/<hash>_theme.md files, not just copy-paste
 - Be well-organized with clear headings and subheadings
 - Be clear, concise, and professional

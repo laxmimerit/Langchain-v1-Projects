@@ -1,6 +1,0 @@
-https://lucidworks.com/blog/the-history-of-mcp-and-acp-where-did-these-ideas-come-from-and-whos-driving-adoption
-https://mcpfy.ai/blog/history-of-model-context-protocol-mcp/
-https://newsletter.pragmaticengineer.com/p/mcp
-https://en.wikipedia.org/wiki/Model_Context_Protocol
-http://blog.modelcontextprotocol.io/tags/roadmap/
-https://modelcontextprotocol.info/blog/mcp-next-version-update/

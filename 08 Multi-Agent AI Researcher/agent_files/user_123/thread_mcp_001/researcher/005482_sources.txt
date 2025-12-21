@@ -1,7 +1,0 @@
-https://modelcontextprotocol.io/specification/2025-06-18/server/prompts
-https://stytch.com/blog/model-context-protocol-introduction/
-https://www.iamdave.ai/blog/top-10-model-context-protocol-use-cases-complete-guide-for-2025/
-https://dev.to/copilotkit/30-mcp-ideas-with-complete-source-code-d8e
-https://www.merge.dev/blog/mcp-integration-examples
-https://modelcontextprotocol.io/specification/2025-06-18/client/sampling
-https://modelcontextprotocol.info/docs/concepts/sampling/

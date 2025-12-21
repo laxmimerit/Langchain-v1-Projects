@@ -1,6 +1,0 @@
-https://www.getknit.dev/blog/the-pros-and-cons-of-adopting-mcp-today
-https://www.moveworks.com/us/en/resources/blog/model-context-protocol-mcp-explained
-https://www.cdata.com/blog/navigating-the-hurdles-mcp-limitations
-https://medium.com/@ckekula/model-context-protocol-mcp-and-its-limitations-4d3c2561b206
-https://modelcontextprotocol.io/development/roadmap
-https://www.getknit.dev/blog/the-future-of-mcp-roadmap-enhancements-and-whats-next
