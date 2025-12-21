@@ -1,0 +1,34 @@
+SOURCE LIST - THEME 3: MCP ARCHITECTURE
+
+1. URL: https://medium.com/@tahirbalarabe2/what-is-model-context-protocol-mcp-architecture-overview-c75f20ba4498
+   Title: What is Model Context Protocol? (MCP) Architecture Overview
+   Snippet: "MCP is built around three main components: the host, the client, and the server. The host is the application that uses the agent... The host includes the client, which is the interface between the host and the server. The server is where the tools live."
+
+2. URL: https://www.baeldung.com/spring-ai-model-context-protocol-mcp
+   Title: Exploring Model Context Protocol (MCP) With Spring AI
+   Snippet: "MCP follows a client-server architecture... MCP Host: is our main application... MCP Clients: are components that establish and maintain 1:1 connections... MCP Servers: are components that integrate with external data sources... Tools: refer to the executable functions."
+   Note: Detail on stdio and SSE transport types.
+
+3. URL: https://mcpcat.io/blog/mcp-server-client-host
+   Title: MCP Server vs Client vs Host Explained
+   Snippet: "The host is the tourist... the client is the translator... the server is the restaurant server... Under the hood, MCP uses JSON-RPC to handle all message traffic."
+   Note: Explains that these roles are logically separate but can run on the same machine.
+
+4. URL: https://obot.ai/resources/learning-center/mcp-architecture/
+   Title: MCP Architecture: Components, Lifecycle & Client-Server Tutorial
+   Snippet: "The interaction begins with a lifecycle handshake... The Client starts by sending an initialize request... The server responds with its own supported protocol version, advertised capabilities... shutdown is signaled using the transport mechanism."
+
+5. URL: https://modelcontextprotocol.io/docs/learn/architecture
+   Title: Architecture overview - Model Context Protocol (Official Docs)
+   Snippet: "MCP focuses solely on the protocol for context exchange—it does not dictate how AI applications use LLMs... MCP consists of two layers: Data layer (JSON-RPC) and Transport layer (stdio/SSE)."
+
+6. URL: https://modelcontextprotocol.info/docs/concepts/transports/
+   Title: Transports - Model Context Protocol (MCP)
+   Snippet: "MCP uses JSON-RPC 2.0 as its wire format... Built-in Transport Types: Standard Input/Output (stdio) and Server-Sent Events (SSE)."
+
+METADATA:
+- Core Participants: Host, Client, Server.
+- Primary Wire Format: JSON-RPC 2.0.
+- Transports: stdio (local), SSE (remote/HTTP).
+- Key Primitives: Tools, Resources, Prompts, Sampling, Elicitation.
+- Lifecycle: Initialize -> Operation -> Shutdown.

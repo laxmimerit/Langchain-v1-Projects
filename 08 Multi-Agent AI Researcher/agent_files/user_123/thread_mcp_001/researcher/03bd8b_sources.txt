@@ -1,0 +1,57 @@
+Sources for Research Theme 4: MCP Applications, Use Cases, and Integrations
+
+1. URL: https://medium.com/@laowang_journey/model-context-protocol-mcp-real-world-use-cases-adoptions-and-comparison-to-functional-calling-9320b775845c
+   Name: Model Context Protocol (MCP) real world use cases, adoptions and comparison to functional calling.
+   Author: Frank Wang (Medium)
+   Date: March 3, 2025
+   Key Snippets:
+   - "A developer might hook up a Google Maps MCP server in Codeium... AI could fetch real map data."
+   - "Zed & Replit (Developer Tools): indicates a trend in IDEs... giving the AI direct, secure access to the user’s codebase."
+   - "Enterprise Early Adopters (Block & Apollo): Block likely exploring MCP to link AI assistants with internal tools or data."
+   - "Sourcegraph Cody can potentially interface with live code repositories and other developer tools."
+
+2. URL: https://www.merge.dev/blog/mcp-integration-examples
+   Name: 5 real-world Model Context Protocol integration examples
+   Author: Jon Gitlin (Merge.dev)
+   Date: (Recent 2024-2025)
+   Key Snippets:
+   - "Power intelligent help desks: AI agent in Slack makes a 'Create ticket' tool call in the customer’s project management platform."
+   - "Enable recruiters to source high-fit candidates: AI agent fetch candidate data from similar open roles in the ATS."
+   - "Help finance teams negotiate with vendors: AI agent makes tool calls to customer’s email service provider (ESP) and ERP system."
+   - "Automate expense reviews: AI agent determines employee’s policy and approves/declines transactions on finance team's behalf."
+
+3. URL: https://github.com/wong2/awesome-mcp-servers
+   Name: Awesome MCP Servers: A curated list of Model Context Protocol (MCP) servers
+   Author: wong2 (GitHub)
+   Key Snippets:
+   - Curated list of hundreds of servers: Filesystem, Git, Memory, Sequential Thinking, Fetch, Everything.
+   - Official integrations from Cloudflare, Docker, Google Cloud Run, Slack, HubSpot, and Zapier.
+   - Community servers for Apple Notes, Android ADB control, and various database connectors (MySQL, SQLite, etc.).
+
+4. URL: https://testguild.com/top-model-context-protocols-mcp/
+   Name: Top Model Context Protocol (MCP) Servers for Test Automation
+   Author: Joe Colantonio (Test Guild)
+   Date: April 9, 2025
+   Key Snippets:
+   - "Playwright MCP uses the browser’s accessibility tree to provide a deterministic, structured representation of web content."
+   - "Selenium MCP Server: enables browser automation through the MCP for Selenium WebDriver."
+   - "MCP Accessibility Scanner: combines Playwright and Axe-core for accessibility compliance testing."
+
+5. URL: https://appwrk.com/insights/top-enterprise-mcp-use-cases
+   Name: MCP in Enterprise AI: Use Cases and Applications
+   Author: Gourav Khanna (APPWRK)
+   Date: September 11, 2025
+   Key Snippets:
+   - "MCP server market projected to hit $2.7B by 2025 and $5.5B by 2034."
+   - "Healthcare: Data Analysis. Retrieve patient histories via MCP Tools and generate compliance-checked summaries."
+   - "Retail & E-commerce: Refund bots verify order status and trigger pre-approved actions like credits."
+   - "Cybersecurity: Anomaly detectors trigger MCP-driven diagnostics on servers."
+
+6. URL: https://blog.arcade.dev/enterprise-mcp-guide-for-retail-ecommerce
+   Name: Enterprise MCP Guide For Retail & eCommerce: Use Cases, Best Practices, and Trends
+   Author: Arcade.dev Team
+   Date: November 25, 2025
+   Key Snippets:
+   - "Retail leaders face a critical decision: build custom integrations or adopt MCP as the 'USB-C for AI'."
+   - "Omnichannel Inventory Automation: Reduces stockouts by 30% and decreases overstock carrying costs by 20%."
+   - "Product Discovery: Shopify MCP server reports 40% reduction in customer service tickets and 25% increase in conversion."

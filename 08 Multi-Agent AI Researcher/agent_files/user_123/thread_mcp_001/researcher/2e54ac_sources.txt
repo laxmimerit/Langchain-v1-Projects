@@ -1,0 +1,37 @@
+### SOURCES FOR THEME 5: Advantages, Limitations, and Future Impact of MCP
+
+**Source 1: 5 Key Benefits of Using Model Context Protocol in AI Systems**
+- **URL:** https://odsc.medium.com/5-key-benefits-of-using-model-context-protocol-in-ai-systems-c030c8f5061a
+- **Publisher:** ODSC - Open Data Science (via Medium)
+- **Date:** June 26, 2025
+- **Key Findings:** Lists benefits: Persistent context across sessions, Modular knowledge injection, Enhanced transparency/auditing, Improved personalization, Interoperability across models (Claude, GPT, LLaMA).
+
+**Source 2: What is Model Context Protocol and Why It Matters for AI Integration**
+- **URL:** https://www.pingcap.com/article/model-context-protocol-secure-scalable-ai-integration/
+- **Publisher:** TiDB (PingCAP) Team
+- **Date:** August 26, 2025
+- **Key Findings:** Mentions up to 30% savings in development costs. Highlights security features like permission-based access and encryption. Compares MCP vs APIs (stateful vs stateless). Use cases in CRM, Email, and knowledge bases.
+
+**Source 3: Shortcomings of Model Context Protocol (MCP) Explained**
+- **URL:** https://www.cdata.com/blog/navigating-the-hurdles-mcp-limitations
+- **Publisher:** CData Software (Stanley Liu)
+- **Date:** May 27, 2025
+- **Key Findings:** Details security concerns: Prompt injection, tool poisoning, tool shadowing, and identity management. Technical hurdles: Stateful design (SSE) vs stateless REST, context scaling (token consumption), lack of error-handling standards.
+
+**Source 4: Model Context Protocol (MCP) and its limitations**
+- **URL:** https://medium.com/@ckekula/model-context-protocol-mcp-and-its-limitations-4d3c2561b206
+- **Publisher:** Chamuditha Kekulawala (Medium)
+- **Date:** May 28, 2025
+- **Key Findings:** Technical deep dive on JSON-RPC 2.0. Discusses "Rug pull attacks" where servers redefine tools dynamically. Analyzes context window limits when reading multiple documents (e.g., hitting limits after ~30 files).
+
+**Source 5: The Model Context Protocol's impact on 2025**
+- **URL:** https://www.thoughtworks.com/en-us/insights/blog/generative-ai/model-context-protocol-mcp-impact-2025
+- **Publisher:** Thoughtworks (Richard Gall)
+- **Date:** December 11, 2025
+- **Key Findings:** Discusses "Context Engineering" as a new technique. Warns against "naive API-to-MCP conversion." Mentions FastMCP framework and toxic flow analysis.
+
+**Source 6: The Future of MCP: Roadmap, Enhancements, and What's Next**
+- **URL:** https://www.getknit.dev/blog/the-future-of-mcp-roadmap-enhancements-and-whats-next
+- **Publisher:** Knit (Akshat Jain)
+- **Date:** September 30, 2025
+- **Key Findings:** Detailed roadmap: OAuth 2.1, Enterprise SSO, MCP Registry ("app store"), Agent Graphs, Asynchronous operations, Multimodality (video/audio). Market projection of $10.3 billion by 2025 with 34.6% CAGR.
