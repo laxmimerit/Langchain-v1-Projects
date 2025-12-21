@@ -1,0 +1,29 @@
+[1] The Creators of Model Context Protocol - Latent.Space
+URL: https://www.latent.space/p/mcp
+Date: April 03, 2025
+Key details: Podcast interview with creators David Soria Parra and Justin Spahr-Summers. Discusses origin in July 2024, "M x N" problem, and inspiration from LSP.
+
+[2] Introducing the Model Context Protocol - Anthropic
+URL: https://www.anthropic.com/news/model-context-protocol
+Date: November 25, 2024
+Key details: Official launch announcement. "USB-C for AI". Release of SDKs and Claude Desktop support.
+
+[3] Model Context Protocol - Wikipedia
+URL: https://en.wikipedia.org/wiki/Model_Context_Protocol
+Date: Accessed May 2025 (Simulated Current Date: Late 2025)
+Key details: Overview of timeline. Mentions adoption by OpenAI (March 2025) and Google (April 2025). Mentions donation to Agentic AI Foundation in Dec 2025.
+
+[4] Donating the Model Context Protocol and establishing the Agentic AI Foundation - Anthropic
+URL: https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation
+Date: December 9, 2025
+Key details: Announcement of donation to Linux Foundation/AAIF. List of founding members (Anthropic, Block, OpenAI).
+
+[5] One Year of MCP: November 2025 Spec Release | Model Context Protocol Blog
+URL: http://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/
+Date: November 25, 2025
+Key details: Retrospective on the first year. Details on Nov 2025 spec update (Tasks, Agentic Servers). Mentions 407% growth in registry.
+
+[6] Roadmap - Model Context Protocol
+URL: https://modelcontextprotocol.io/development/roadmap
+Date: Updated Oct 31, 2025
+Key details: Outlines priorities for Nov 2025 release including Asynchronous Operations and Server Identity.
