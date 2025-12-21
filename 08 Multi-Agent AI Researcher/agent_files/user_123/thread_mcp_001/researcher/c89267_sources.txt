@@ -1,0 +1,26 @@
+### SOURCES FOR THEME 3: ARCHITECTURAL COMPONENTS, PROTOCOLS, AND STANDARDS
+
+1. **Google Cloud - What is Model Context Protocol (MCP)? A guide**
+   - URL: https://cloud.google.com/discover/what-is-model-context-protocol
+   - Key Snippet: "The transport layer uses JSON-RPC 2.0 messages... mainly through two transport methods: Standard input/output (stdio) and Server-sent events (SSE)."
+   - Meta: Detailed overview of Host, Client, Server roles and security principles.
+
+2. **Official MCP Documentation - Architecture (Draft)**
+   - URL: https://modelcontextprotocol.info/specification/draft/architecture/
+   - Key Snippet: "MCP follows a client-host-server architecture where each host can run multiple client instances... Built on JSON-RPC, MCP provides a stateful session protocol."
+   - Meta: Detailed diagrams and design philosophy (Isolation, Composability).
+
+3. **Official MCP Specification (Latest 2025-11-25)**
+   - URL: https://modelcontextprotocol.io/specification/2025-11-25
+   - Key Snippet: "The protocol uses JSON-RPC 2.0 messages to establish communication between Hosts, Clients, and Servers."
+   - Meta: Defines the authoritative protocol requirements, lifecycle (Initialize, Versioning, Capability Negotiation).
+
+4. **ClaudeMCP - MCP Protocol Specification**
+   - URL: https://claudemcp.com/specification
+   - Key Snippet: "Request: Bidirectional message... ID cannot be null... Notification: One-way message that doesn't require a response... cannot include an ID field."
+   - Meta: Detailed JSON structure examples and lifecycle phases (Operation, Shutdown).
+
+5. **Snyk - A Beginner's Guide to Visually Understanding MCP Architecture**
+   - URL: https://snyk.io/articles/a-beginners-guide-to-visually-understanding-mcp-architecture/
+   - Key Snippet: "Sampling and two-way LLM communication provide more than just similarity... also cater to the LLM's multi-model strengths... Sampling allows the MCP Server to query the LLM."
+   - Meta: Detailed explanation of the "Sampling" capability and "N x M" problem. Mentions serverless HTTP.
