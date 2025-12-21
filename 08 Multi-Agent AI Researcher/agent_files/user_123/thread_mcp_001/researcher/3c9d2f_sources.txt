@@ -1,0 +1,21 @@
+https://en.wikipedia.org/wiki/Model_Context_Protocol
+- Title: Model Context Protocol - Wikipedia
+- Date: Retrieved 2025-05-12
+- Key Facts: Created by David Soria Parra and Justin Spahr-Summers. Introduced Nov 25, 2024. OpenAI adopted in March 2025. Donated to Agentic AI Foundation (Linux Foundation) in Dec 2025.
+
+https://www.latent.space/p/mcp
+- Title: The Creators of Model Context Protocol
+- Date: Apr 03, 2025
+- Source: Latent Space Podcast
+- Key Quote: "The Model Context Protocol was created by David Soria Parra (@dsp) and Justin Spahr-Summers (@jspahrsummers)."
+- Context: Interview detailing the "July 2024" inception story and the frustration with "M x N" problems.
+
+http://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/
+- Title: One Year of MCP: November 2025 Spec Release
+- Date: Nov 25, 2025
+- Key Facts: retrospective on the first year. Mentions "407% growth" in registry. Details new features like Async Operations and Statelessness.
+
+https://www.youtube.com/watch?v=m2VqaNKstGc
+- Title: The Creators of Model Context Protocol - YouTube
+- Date: Apr 03, 2025
+- Content: Video interview with creators confirming the "July 2024" start date and inspiration from LSP.

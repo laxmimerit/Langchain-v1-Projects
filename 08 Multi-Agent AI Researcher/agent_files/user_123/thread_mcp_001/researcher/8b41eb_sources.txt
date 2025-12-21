@@ -1,0 +1,26 @@
+https://spacelift.io/blog/model-context-protocol-mcp
+- Title: What Is MCP? Model Context Protocol Explained Simply
+- Date: Updated 08 Sep 2025
+- Key Quote: "MCP is designed to improve continuity, memory, and personalization using machine-readable schemas and standardized data exchange formats."
+- Key Concept: Addresses the "N×M integration problem."
+
+https://modelcontextprotocol.io/specification/2025-11-25
+- Title: Specification - Model Context Protocol
+- Date: Version 2025-11-25
+- Type: Official Documentation
+- Key Facts: JSON-RPC 2.0 based. Defines Hosts, Clients, Servers. Core features: Resources, Prompts, Tools.
+
+https://www.anthropic.com/news/model-context-protocol
+- Title: Introducing the Model Context Protocol
+- Date: Nov 25, 2024
+- Key Quote: "MCP addresses this challenge. It provides a universal, open standard for connecting AI systems with data sources..."
+- Analogy: "USB-C for AI apps"
+
+https://www.aihero.dev/what-problem-does-model-context-protocol-solve
+- Title: What Problem Does The Model Context Protocol Solve?
+- Author: Matt Pocock
+- Key Concept: "Instead of your LLM having to learn the entire GitHub API, it can receive a LLM-friendly interface to interact with."
+
+https://modelcontextprotocol.info/docs/concepts
+- Title: Core Concepts - Model Context Protocol
+- content: Detailed list of concepts (Roots, Sampling, Transports) and ecosystem links.

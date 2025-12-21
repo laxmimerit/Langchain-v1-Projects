@@ -1,0 +1,6 @@
+https://modelcontextprotocol.io/docs/learn/architecture
+https://nebius.com/blog/posts/understanding-model-context-protocol-mcp-architecture
+https://modelcontextprotocol.io/specification/2025-06-18/basic/transports
+https://cloud.google.com/discover/what-is-model-context-protocol
+https://medium.com/@jamestang/deep-dive-understanding-mcp-client-server-communication-with-agent-and-llm-aa4782a65991
+https://obot.ai/resources/learning-center/mcp-architecture/

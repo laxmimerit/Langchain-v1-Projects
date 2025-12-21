@@ -1,0 +1,25 @@
+https://lucidworks.com/blog/the-history-of-mcp-and-acp-where-did-these-ideas-come-from-and-whos-driving-adoption
+- "The Origins of MCP and ACP: How AI Protocols Emerged"
+- Details the timeline: MCP intro late 2024 by Anthropic, ACP intro early 2025 by OpenAI/Stripe.
+- Identifies the "N×M" problem.
+
+https://mcpfy.ai/blog/history-of-model-context-protocol-mcp/
+- "The Complete History of MCP: From MOP to the Future of Model Context Protocol"
+- Mentions "MOP" (Model Object Protocol) as a predecessor.
+- Confirms Anthropic as the creator.
+
+https://www.youtube.com/watch?v=m2VqaNKstGc
+- "The Creators of Model Context Protocol" (Latent Space Podcast)
+- Identifies David Soria Parra and Justin Spahr-Summers as co-creators.
+- Discusses the inspiration from LSP (Language Server Protocol).
+
+https://en.wikipedia.org/wiki/Model_Context_Protocol
+- Comprehensive Wikipedia entry.
+- Confirms launch date: November 25, 2024.
+- Lists key milestones: OpenAI adoption (March 2025), Google adoption (April 2025), Donation to Linux Foundation (Dec 2025).
+- Confirms creators: David Soria Parra and Justin Spahr-Summers.
+
+http://blog.modelcontextprotocol.io/posts/2025-11-25-first-mcp-anniversary/
+- "One Year of MCP: November 2025 Spec Release"
+- Details the Nov 2025 update features: Task-based workflows, Agentic servers.
+- Reflects on the growth from experiment to standard.
